@@ -41,9 +41,9 @@ class MyClient(discord.Client):
                     "Solad, vad kollar du på?",
                     "Solaf, har du sett klistermärkerna?",
                     f"{self.easteregg} easteregg ;)"
-            ]		
+            ]        
 
-        if message.content == ('Solaf, har du sett klistermärkerna?'):	
+        if message.content == ('Solaf, har du sett klistermärkerna?'):    
                 async with message.channel.typing():
                     sleep(9)
             await message.channel.send('Ja.')
@@ -67,6 +67,6 @@ class MyClient(discord.Client):
         if message.content == ('+penis'):
             messagelist = [f"8{self.penis}3"]
             self.penis+='='
-				
+                
 client = MyClient()
 client.run(botid)

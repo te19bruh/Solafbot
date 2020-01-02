@@ -1,0 +1,34 @@
+{
+    "people": [
+        {
+            "firstname": "Junior",
+            "lastname": "Rantila",
+            "discord": "Salanty#4884"
+        },
+        {
+            "firstname": "Samuel",
+            "lastname": "Broman",
+            "discord": "sampaixd#8896"
+        },
+        {
+            "firstname": "Adam",
+            "lastname": "Shapiro",
+            "discord": "Ugn Värmsson#7650"
+        },
+        {
+            "firstname": "Adam",
+            "lastname": "Westin",
+            "discord": "Eyy B0ss#9506"
+        },
+        {
+            "firstname": "Calle",
+            "lastname": "Engman",
+            "discord": "Calle#4643"
+        },
+        {
+            "firstname": "Solaf",
+            "lastname": "Mememaster",
+            "discord": "Solaf#7852"
+        }
+    ]
+}

@@ -1,0 +1,3 @@
+[submodule "botlib"]
+	path = botlib
+	url = https://github.com/juniorrantila/botlib

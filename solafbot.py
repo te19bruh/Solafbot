@@ -15,8 +15,14 @@ def id_generator(size=11, chars=string.ascii_uppercase + string.ascii_lowercase 
     return ''.join(random.choice(chars) for _ in range(size))
 
 class MyClient(discord.Client):
-
-    penis='='
+    
+    with open("penislength", "a") as init:
+        pass
+    with open("penislength", "r") as init:
+        penis = init.read()
+        if penis == "":
+            penis = "="
+    
     easteregg=2
     
     async def on_ready(self):
@@ -41,7 +47,8 @@ class MyClient(discord.Client):
                     "Solad, vad kollar du på?",
                     "Solaf, har du sett klistermärkerna?",
                     f"{self.easteregg} easteregg ;)"
-            ]        
+                    ]
+            await sendMessage(messagelist, istyping=False)
 
         if message.content == ('Solaf, har du sett klistermärkerna?'):    
                 async with message.channel.typing():
@@ -56,7 +63,7 @@ class MyClient(discord.Client):
             messagelist = [f"https://youtube.com/{random.randint(1,1000)}", "Berätta inte till Greta :|"]
             await sendMessage(messagelist)
         
-        if message.content == ('Solaf, tar det vanliga.') and message.author == samuel:
+        if message.content == ('Solaf, tar det vanliga.') and str(message.author) == discordTag[1]:
             messagelist = [f"https://youtube.com/{random.randint(1,1000)}", "Berätta inte till Greta :|"]
             await sendMessage(messagelist)
 
@@ -68,6 +75,8 @@ class MyClient(discord.Client):
             messagelist = [f"8{self.penis}3"]
             await sendMessage(messagelist)
             self.penis+='='
+            with open("penislength", "w") as penislength:
+                penislength.write(f"{str(self.penis)}")
                 
 client = MyClient()
 client.run(botid)

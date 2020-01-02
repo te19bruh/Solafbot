@@ -2,6 +2,7 @@
 import random
 import string
 from time import sleep
+import botlib.info as info
 
 botid = info.getBotId()
 botid = botid[1]

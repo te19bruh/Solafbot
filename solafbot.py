@@ -66,7 +66,7 @@ class MyClient(discord.Client):
 
         if message.content == ('+penis'):
             messagelist = [f"8{self.penis}3"]
-            await sendMessage(messageList)
+            await sendMessage(messagelist)
             self.penis+='='
                 
 client = MyClient()

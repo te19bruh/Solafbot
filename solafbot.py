@@ -46,26 +46,27 @@ class MyClient(discord.Client):
         if message.content == ('Solaf, har du sett klistermärkerna?'):    
                 async with message.channel.typing():
                     sleep(9)
-            await message.channel.send('Ja.')
+                await message.channel.send('Ja.')
 
         if message.content == ('Solaf, vad kollar du på?'):
-            messagelist = [f"https://youtube.com/watch?v={str(id_generator())}]
+            messagelist = [f"https://youtube.com/watch?v={id_generator()}"]
             await sendMessage(messagelist)
 
-        if str(message.author) != samuel and message.content == "Solaf, Samuel skickade mig.":
-            messagelist = [f"https://youtube.com/(random.randint(1,1000)}", "Berätta inte till Greta :|"]
-            sendMessage(messagelist)
+        if str(message.author) != discordTag[1] and message.content == "Solaf, Samuel skickade mig.":
+            messagelist = [f"https://youtube.com/{random.randint(1,1000)}", "Berätta inte till Greta :|"]
+            await sendMessage(messagelist)
         
         if message.content == ('Solaf, tar det vanliga.') and message.author == samuel:
             messagelist = [f"https://youtube.com/{random.randint(1,1000)}", "Berätta inte till Greta :|"]
-            sendMessage(messagelist)
+            await sendMessage(messagelist)
 
-        if str(message.author) != calle and message.content == "Trim!"
-        messagelist = ["Halal. :thumbsup:"]
-        sendMessage(messagelist)
+        if str(message.author) != discordTag[4] and message.content == "Trim!":
+            messagelist = ["Halal. :thumbsup:"]
+            await sendMessage(messagelist)
 
         if message.content == ('+penis'):
             messagelist = [f"8{self.penis}3"]
+            await sendMessage(messagelist)
             self.penis+='='
                 
 client = MyClient()

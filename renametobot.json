@@ -1,0 +1,16 @@
+{
+    "bots": [
+        {
+            "name": "Calle",
+            "id": "insert id"
+        },
+        {
+            "name": "Solaf",
+            "id": "insert id"
+        },
+        {
+            "name": "Test",
+            "id": "insert id"
+        }
+    ]
+}

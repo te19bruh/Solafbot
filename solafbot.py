@@ -1,15 +1,13 @@
-﻿import discord
-import random
-import string
+﻿import discord, random, string
 from time import sleep
 import botlib.info as info
 
 botid = info.getBotId()
 botid = botid[1]
 
-firstname   = info.setUserFirst()
-lastname    = info.setUserLast()
-discordTag  = info.setUserDiscord()
+firstname   = info.setUser("firstname")
+lastname    = info.setUser("lastname")
+discordTag  = info.setUser("discord")
 
 def id_generator(size=11, chars=string.ascii_uppercase + string.ascii_lowercase + string.digits):
     return ''.join(random.choice(chars) for _ in range(size))

@@ -57,15 +57,15 @@ class MyClient(discord.Client):
             messagelist = [f"https://youtube.com/watch?v={id_generator()}"]
             await sendMessage(messagelist)
 
-        if str(message.author) != discordTag[1] and message.content == "Solaf, Samuel skickade mig.":
+        if str(message.author) != discordTag[3] and message.content == "Solaf, Samuel skickade mig.":
             messagelist = [f"https://youtube.com/{random.randint(1,1000)}", "Berätta inte till Greta :|"]
             await sendMessage(messagelist)
         
-        if message.content == ('Solaf, tar det vanliga.') and str(message.author) == discordTag[1]:
+        if message.content == ('Solaf, tar det vanliga.') and str(message.author) == discordTag[3]:
             messagelist = [f"https://youtube.com/{random.randint(1,1000)}", "Berätta inte till Greta :|"]
             await sendMessage(messagelist)
 
-        if str(message.author) != discordTag[4] and message.content == "Trim!":
+        if str(message.author) != discordTag[0] and message.content == "Trim!":
             messagelist = ["Halal. :thumbsup:"]
             await sendMessage(messagelist)
 

@@ -1,3 +1,6 @@
 [submodule "botlib"]
 	path = botlib
 	url = https://github.com/te19bruh/botlib
+[submodule "json"]
+	path = json
+	url = https://github.com/te19bruh/json

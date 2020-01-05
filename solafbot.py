@@ -83,12 +83,12 @@ async def on_message(message):
     if message.content == ('Solaf, hjälp!'):
         messagelist = [
                 "Trim!",
-                "Solad, vad kollar du på?",
+                "Solaf, vad kollar du på?",
                 "Solaf, har du sett klistermärkerna?",
                 f"{easteregg} easteregg ;)"]
         await sendMessage(messagelist, istyping=False)
 
-    if message.content == ('Solaf, har du sett klistermärkerna?'):    
+    if message.content == ('Solaf, har du sett klistermärkerna'):    
         async with message.channel.typing():
             await sleep(9)
         await message.channel.send('Ja.')

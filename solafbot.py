@@ -17,6 +17,7 @@ firstname   = info.setUser("firstname")
 lastname    = info.setUser("lastname")
 fullname    = info.setUser("fullname")
 discordTag  = info.setUser("discord")
+easteregg   = 2
 
 with open("penissize", "a"):
     pass
@@ -27,6 +28,9 @@ with open("penissize", "r") as init:
         penisSize = "1"
 with open("penissize", "w") as init:
     init.write(penisSize)
+
+async def id_generator(size=11, chars=string.ascii_uppercase + string.ascii_lowercase + string.digits):
+    return ''.join(random.choice(chars) for _ in range(size))
 
 async def getUserFName(userId):
     pos = discordTag.index(str(userId))
@@ -81,7 +85,7 @@ async def on_message(message):
                 "Trim!",
                 "Solad, vad kollar du på?",
                 "Solaf, har du sett klistermärkerna?",
-                "f{self.easteregg} easteregg ;)"
+                f"{easteregg} easteregg ;)"]
         await sendMessage(messagelist, istyping=False)
 
     if message.content == ('Solaf, har du sett klistermärkerna?'):    
@@ -95,14 +99,15 @@ async def on_message(message):
         await sendMessage(messagelist)
     
     if message.content == ('Solaf, vad kollar du på?'):
-        messagelist = [f"https://youtube.com/watch?v={id_generator()}"]
+        id = await id_generator()
+        messagelist = [f"https://youtube.com/watch?v={id}"]
         await sendMessage(messagelist)
     
-    if str(message.author) != str(getTag("Samuel Broman")) and message.content == "Solaf, Samuel skickade mig.":
+    if str(message.author) != str(await getTag("Samuel Broman")) and message.content == "Solaf, Samuel skickade mig.":
         messagelist = [f"https://youtube.com/{random.randint(1,1000)}", "Berätta inte till Greta :|"]
         await sendMessage(messagelist)      
 
-    if message.content == ('Solaf, tar det vanliga.') and str(message.author) == str(getTag("Samuel Broman"))
+    if message.content == ('Solaf, tar det vanliga.') and str(message.author) == str(await getTag("Samuel Broman")):
         messagelist = [f"https://youtube.com/{random.randint(1,1000)}", "Berätta inte till Greta :|"]
         await sendMessage(messagelist)
         

@@ -111,7 +111,7 @@ async def on_message(message):
         messagelist = [f"https://youtube.com/{random.randint(1,1000)}", "Berätta inte till Greta :|"]
         await sendMessage(messagelist)
         
-    if str(message.author) != str(getTag("Calle Engman")) and message.content == "Trim!":
+    if str(message.author) != str(await getTag("Calle Engman")) and message.content == "Trim!":
         messagelist = ["Halal. :thumbsup:"]
         await sendMessage(messagelist)
 
